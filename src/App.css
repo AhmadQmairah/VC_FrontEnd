@@ -1,7 +1,72 @@
-.App {
+Skip
+  to
+  content
+  Search
+  or
+  jump
+  to…
+  Pull
+  requests
+  Issues
+  Marketplace
+  Explore
+  @AhmadQmairah
+  Learn
+  Git
+  and
+  GitHub
+  without
+  any
+  code!
+  Using
+  the
+  Hello
+  World
+  guide,
+you’ll start a branch,
+write comments,
+and
+  open
+  a
+  pull
+  request.
+  salemmarafi
+  /
+  tapcom
+  Private
+  1
+  0
+  0
+  Code
+  Issues
+  Pull
+  requests
+  Actions
+  Projects
+  Wiki
+  Security
+  Insights
+  tapcom/dashboard/dashboard/src/App.css
+  Ahmad
+  Qmairah
+  done
+  Latest
+  commit
+  76ab153
+  5
+  days
+  ago
+  History
+  1
+  contributor
+  241
+  lines
+  (209 sloc)
+  4.21
+  KB
+  .App {
   text-align: center;
 }
-
 html,
 body {
   font-family: "Quicksand", "Cairo", sans-serif !important;
@@ -16,6 +81,14 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .site-layout-background-sider {
+    padding: 24px 0px !important;
+  }
+  .range-small {
+    margin-bottom: 15px !important;
   }
 }
 
@@ -41,4 +114,192 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .ant-modal-footer {
+  padding: 0px !important;
+  min-height: 45px !important;
+} */
+
+::-webkit-scrollbar {
+  width: 0px !important; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.dot-green {
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+  background-color: #52c41a;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-red {
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+  background-color: #ff1a1a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-orange {
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-blue {
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-yellow {
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.radio-hover:hover {
+  color: black !important;
+}
+
+.round-corner {
+  border-radius: 5% !important;
+  border: none !important;
+  border-width: 1px !important;
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+.round-corner:not(:first-child)::before {
+  content: none !important;
+}
+
+.ant-radio-button-wrapper-checked:hover {
+  color: white !important;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+[data-theme="dark"] .editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #434343;
+}
+
+.avatar-uploader {
+  width: unset !important;
+}
+.ant-upload {
+  margin: 0 !important;
+}
+
+.ant-upload-select-picture-card i {
+  color: #999;
+  font-size: 5px;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  color: #666;
+}
+
+.ant-upload-list-picture-card-container {
+  width: 60px !important;
+  height: 60px !important;
+}
+.ant-upload-list-picture-card {
+  width: 100% !important;
+}
+.ant-upload-list-item {
+  width: 60px !important;
+  height: 60px !important;
+}
+.ant-upload-list-item-info::before {
+  left: 0px;
+}
+
+.anticon {
+  position: relative;
+  top: -3px;
+}
+
+.note-group-select-from-files {
+  display: none !important;
+}
+
+.note-link-popover {
+  display: none !important;
+}
+
+.note-image-popover {
+  display: none !important;
+}
+
+/* .avatar-uploader3 > .ant-upload {
+  transform: scale(0.7);
+  position: relative;
+  top: -20px;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #c1c1c1;
+}
+span.avatar-uploader3 > div > span {
+  font-size: 20px !important;
+}
+.avatar-uploader2 {
+  width: unset !important;
+} */
+
+.ant-dropdown {
+  min-width: 140px !important;
+}
+
+.ant-menu-submenu-title {
+  margin: 0px !important;
+}
+
+.ant-transfer {
+  min-width: 450px;
+}
+.ant-transfer-list {
+  height: 100% !important;
+  width: 42% !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

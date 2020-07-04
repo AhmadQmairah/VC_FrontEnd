@@ -2,17 +2,23 @@ import jwt_decode from "jwt-decode";
 import { SET_CURRENT_USER, SET_ERROR } from "./actionTypes";
 import instance from "./instance";
 import axios from "axios";
+import { message } from "antd";
 
 export const login = (userData) => {
   return async (dispatch) => {
     try {
+      if (!userData) {
+        dispatch(setCurrentUser());
+        dispatch({ type: "CLEAR_ERRORS" });
+      }
       const res = await instance.post("/login/", userData);
-
       const user = res.data;
-      dispatch(setCurrentUser(user.access));
+
+      dispatch(setCurrentUser(user.access, user.is_doctor));
       dispatch({ type: "CLEAR_ERRORS" });
     } catch (err) {
       const response = err.response;
+      console.log(err.response.data);
       if (response) dispatch({ type: SET_ERROR, payload: err.response.data });
     }
   };
@@ -32,7 +38,7 @@ export const signup = (userData) => {
   };
 };
 
-const setCurrentUser = (token) => {
+const setCurrentUser = (token, is_doctor = false) => {
   return async (dispatch) => {
     let user;
 
@@ -42,9 +48,10 @@ const setCurrentUser = (token) => {
       instance.defaults.headers.common.Authorization = `Bearer ${token}`;
 
       user = jwt_decode(token);
+      console.log(token);
       dispatch({
         type: SET_CURRENT_USER,
-        payload: user,
+        payload: { user, is_doctor },
       });
     } else {
       localStorage.removeItem("token");
@@ -54,7 +61,7 @@ const setCurrentUser = (token) => {
       user = null;
       dispatch({
         type: SET_CURRENT_USER,
-        payload: user,
+        payload: { user, is_doctor },
       });
     }
   };
@@ -79,4 +86,15 @@ export const checkForExpiredToken = () => {
     }
   }
   return logout();
+};
+
+export const deletapp = (id, index) => {
+  return async (dispatch) => {
+    instance.post("del_app/", { id: id });
+    message.success("Appointment deleted successfully");
+    dispatch({
+      type: "Delete_APP",
+      payload: index,
+    });
+  };
 };
